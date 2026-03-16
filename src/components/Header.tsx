@@ -11,7 +11,7 @@ export default function Header(){
 
     return(
         <>
-            <section className={`h-30 flex justify-center items-center max-md:max-h-18 max-md:px-4 max-md:py-5 max-md:justify-between w-full ${isDark ? 'bg-black text-white' : 'bg-white text-black'}`}>
+            <section className={`h-30 flex justify-center items-center max-md:max-h-18 max-md:px-7 max-md:py-5 max-md:justify-between w-full ${isDark ? 'bg-black text-white' : 'bg-white text-black'}`}>
                 <div className="flex flex-col items-center justify-center gap-8 max-md:flex-row max-md:justify-between max-md:w-full">
 
                     <svg width="92" height="32" viewBox="0 0 92 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="md:hidden">
