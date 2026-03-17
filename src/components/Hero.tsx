@@ -20,7 +20,7 @@ export default function Hero(){
             <div className={`flex items-center justify-center w-full `}>
 
 
-                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 text-center max-md:w-52 max-md:hidden ${isDark?`text-white`:`text-dark`}`}>Hello, I'm Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.</p>
+                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%]  text-center max-md:w-52 max-md:hidden ${isDark?`text-white`:`text-dark`}`}>Hello, I'm Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.</p>
                 <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 max-md:w-52 md:hidden text-center ${isDark?`text-white`:`text-dark`}`}>Hey there, I'm Joey, a digital product designer specializing in branding, marketing, and no-code tools.</p>
 
 
