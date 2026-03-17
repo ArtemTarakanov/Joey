@@ -2,9 +2,9 @@ import { useTheme } from '../context/ThemeContext';
 export default function Hero(){
     const { isDark } = useTheme();
     return(
-        <section className = {`h-185 gap-20 max-md:gap-8 flex flex-col items-center max-md:py-6 ${isDark ? 'bg-black' : 'bg-white'}`}>
+        <section className = {`h-full w-full gap-20 max-md:gap-5 flex flex-col items-center pt-12 pb-36 px-28 max-md:py-6 max-md:px-4 ${isDark ? 'bg-black' : 'bg-white'}`}>
             <div className = "flex flex-row  ">
-                <h1 className = {` font-['Work Sans'] font-semibold text-[227px] leading-[90%] tracking-[-2%] max-md:text-5xl max-md:leading-[120%] max-md:tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Websites& <span className = "flex flex-row items-center align-middle gap-10 max-md:flex-col max-md:gap-5 "> Branding <button className = {`flex items-center justify-center  mt-16 max-md:mt-0 rounded-[144px] py-7 max-md:py-4 px-8 max-md:px-5 max-md:w-[180px] ${isDark?`bg-[#141414]`:`bg-[#F9F9F9]`}`}>
+                <h1 className = {`w-full font-['Work Sans'] font-semibold text-[227px] leading-[90%] tracking-[-2%] max-md:text-5xl max-md:leading-[120%] max-md:tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Websites& <span className = "flex flex-row items-center align-middle gap-10 max-md:flex-col max-md:gap-5 "> Branding <button className = {`flex items-center justify-center  mt-16 max-md:mt-0 rounded-[144px] py-7 max-md:py-4 px-8 max-md:px-5 max-md:w-[180px] ${isDark?`bg-[#141414]`:`bg-[#F9F9F9]`}`}>
                     <a href="#" className = {`font-['Work Sans'] font-semibold text-xl max-md:text-sm leading-[140%] tracking-[-1%] flex flex-row gap-2 items-center ${isDark?`text-white`:`text-black`}`}>
 
                         SCROLL DOWN
@@ -17,15 +17,11 @@ export default function Hero(){
 
             </div>
 
-            <div className={`flex flex-row gap-155 max-md:gap-12 items-center justify-around `}>
+            <div className={`flex items-center justify-center w-full `}>
 
-                <div className={`flex flex-col gap-2.25`}>
-                    <p className = {` font-['Work Sans'] font-semibold text-2xl max-md:text-xl leading-[130%] max-md:leading-[140%] tracking-[-1%] ${isDark? `text-white`:`text-black`}`}>Let’s Talk</p>
-                    <span className = {`font-['Work Sans'] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>hello@joey.co</span>
-                </div>
 
-                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 max-md:w-52 max-md:hidden ${isDark?`text-white`:`text-dark`}`}>Hello, I'm Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.</p>
-                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 max-md:w-52 md:hidden ${isDark?`text-white`:`text-dark`}`}>Hey there, I'm Joey, a digital product designer specializing in branding, marketing, and no-code tools.</p>
+                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 text-center max-md:w-52 max-md:hidden ${isDark?`text-white`:`text-dark`}`}>Hello, I'm Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.</p>
+                <p className = {`font-[Work Sans] font-medium text-xl max-md:text-sm leading-[140%] max-md:leading-6 tracking-[-1%] max-w-117.75 max-md:w-52 md:hidden text-center ${isDark?`text-white`:`text-dark`}`}>Hey there, I'm Joey, a digital product designer specializing in branding, marketing, and no-code tools.</p>
 
 
             </div>
