@@ -5,6 +5,7 @@ import Projects from "./components/Projects.tsx";
 import Expertise from "./components/Expertise.tsx";
 import String from "./components/String.tsx";
 import Testimonials from "./components/Testimonials.tsx";
+import Contacts from "./components/Contacts.tsx";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
 
       <String/>
       <Testimonials/>
+
+      <section id='contact'>
+        <Contacts/>
+      </section>
     </>
   )
 }
