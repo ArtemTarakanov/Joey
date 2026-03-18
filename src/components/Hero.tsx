@@ -4,7 +4,7 @@ export default function Hero(){
     return(
         <section className = {`h-full w-full gap-20 max-md:gap-5 flex flex-col items-center pt-12 pb-36 px-28 max-md:py-6 max-md:px-4 ${isDark ? 'bg-black' : 'bg-white'}`}>
             <div className = "flex flex-row  ">
-                <h1 className = {`w-full font-['Work Sans'] font-semibold text-[227px] leading-[90%] tracking-[-2%] max-md:text-5xl max-md:leading-[120%] max-md:tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Websites& <span className = "flex flex-row items-center align-middle gap-10 max-md:flex-col max-md:gap-5 "> Branding <button className = {`flex items-center justify-center  mt-16 max-md:mt-0 rounded-[144px] py-7 max-md:py-4 px-8 max-md:px-5 max-md:w-[180px] ${isDark?`bg-[#141414]`:`bg-[#F9F9F9]`}`}>
+                <h1 className = {`w-full font-['Work Sans'] font-semibold text-[227px] leading-[90%] tracking-[-2%] max-md:text-5xl max-md:leading-[120%] max-md:tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Websites& <span className = "flex flex-row items-center align-middle gap-10 max-md:flex-col max-md:gap-5 "> Branding <button className = {`flex items-center justify-center  mt-16 max-md:mt-0 rounded-[144px] py-7 max-md:py-4 px-8 max-md:px-5 max-md:w-45 cursor-pointer : ${isDark?`bg-[#141414]`:`bg-[#F9F9F9]`}`}>
                     <a href="#" className = {`font-['Work Sans'] font-semibold text-xl max-md:text-sm leading-[140%] tracking-[-1%] flex flex-row gap-2 items-center ${isDark?`text-white`:`text-black`}`}>
 
                         SCROLL DOWN
