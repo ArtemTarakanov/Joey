@@ -19,6 +19,7 @@ export default function String() {
                         ease: "linear"
                     }
                 }}
+
             >
                 <p className={`font-['Work Sans'] font-semibold text-[140px] max-md:text-5xl leading-[110%] tracking-[-2%] text-white mr-10`}>
                     Visual design for digital experiences
