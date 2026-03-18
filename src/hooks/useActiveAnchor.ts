@@ -4,23 +4,34 @@ export function useActiveAnchor() {
   const [activeAnchor, setActiveAnchor] = useState('home');
 
   useEffect(() => {
-    // Функция для определения активного якоря
     const handleScroll = () => {
       const sections = ['home', 'projects', 'about', 'contact'];
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
       
+      // Если почти в конце страницы - активируем contact
+      if (scrollPosition + windowHeight >= documentHeight - 100) {
+        setActiveAnchor('contact');
+        return;
+      }
+      
+      // Определяем текущую секцию
+      let currentSection = 'home';
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
-          const rect = element.getBoundingClientRect();
-          // Если элемент в верхней части экрана (в пределах 100px от top)
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActiveAnchor(section);
-            break;
+          const elementTop = window.scrollY + element.getBoundingClientRect().top;
+          if (scrollPosition + 150 >= elementTop) {
+            currentSection = section;
           }
         }
       }
+      
+      setActiveAnchor(currentSection);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
