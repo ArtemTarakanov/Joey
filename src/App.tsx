@@ -2,21 +2,24 @@ import './App.css'
 import Header from './components/Header';
 import Hero from "./components/Hero.tsx";
 import Projects from "./components/Projects.tsx";
+import Expertise from "./components/Expertise.tsx";
 
 function App() {
   return (
     <>
-    <section id='#home'>
-      <Header/>
-    </section>
+    <Header/>
 
-    <section id='#home'>
+    <section id='home'>
       <Hero/>
     </section>
 
-    <section id='#projects'>
+    <section id='projects'>
       <Projects/>
     </section>
+
+      <section id = 'about'>
+        <Expertise/>
+      </section>
     </>
   )
 }
