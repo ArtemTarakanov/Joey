@@ -26,7 +26,7 @@ const cards = [
 export default function Projects() {
     const { isDark } = useTheme();
     return(
-        <section className = {`h-full pb-38 flex flex-col px-40 max-md:px-4 max-md:py-14 gap-10 max-md:gap-8 items-center justify-center max-w-400 ${isDark ? 'bg-black' : 'bg-white'}`}>
+        <section className = {`h-full pb-38 flex flex-col px-40 max-md:px-4 max-md:py-14 max-md:pb-0 gap-10 max-md:gap-8 items-center justify-center max-w-400 ${isDark ? 'bg-black' : 'bg-white'}`}>
 
             <div className = "flex flex-col gap-2.5 w-full  ">
                 <h2 className={`font-['Work Sans'] font-semibold text-5xl max-md:text-2xl  leading-[120%] max-md:leading-[130%] tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Projects</h2>
