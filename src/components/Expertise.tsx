@@ -23,7 +23,7 @@ const cards = [
 export default function Expertise(){
     const {isDark} = useTheme();
     return(
-        <section className={`h-auto flex items-center justify-center px-28 max-md:px-4 py-19 max-md:py-5 ${isDark ? 'bg-black' : 'bg-white'}` }>
+        <section className={`h-auto flex items-center justify-center px-28 max-md:px-4 py-19 max-md:py-12 ${isDark ? 'bg-black' : 'bg-white'}` }>
             <div className={`flex flex-col gap-11 max-md:gap-3.5 `}>
                 <h2 className={`font-['Work Sans'] font-semibold text-5xl max-md:text-2xl leading-[120%] tracking-[-1%] ${isDark?`text-white`:`text-black`}`}>Expertise</h2>
 
