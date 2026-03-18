@@ -36,7 +36,7 @@ export default function Header(){
                         </a>
                         <a
                             href="#projects"
-                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-2 rounded-full transition-all ${
+                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-3 rounded-full transition-all ${
                                 isActive('projects')
                                     ? isDark ? 'bg-black text-white' : 'bg-white text-black'
                                     : isDark ? 'text-black' : 'text-[#C4C4C4]'
@@ -46,7 +46,7 @@ export default function Header(){
                         </a>
                         <a
                             href="#about"
-                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-2 rounded-full transition-all ${
+                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-3 rounded-full transition-all ${
                                 isActive('about')
                                     ? isDark ? 'bg-black text-white' : 'bg-white text-black'
                                     : isDark ? 'text-black' : 'text-[#C4C4C4]'
@@ -56,7 +56,7 @@ export default function Header(){
                         </a>
                         <a
                             href="#contact"
-                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-2 rounded-full transition-all ${
+                            className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] px-4 py-3 rounded-full transition-all ${
                                 isActive('contact')
                                     ? isDark ? 'bg-black text-white' : 'bg-white text-black'
                                     : isDark ? 'text-black' : 'text-[#C4C4C4]'
@@ -78,8 +78,8 @@ export default function Header(){
                         </button>
                     </ul>
 
-                    <button onClick={() => setIsOpen(!isOpen)} className={`w-10 h-10 rounded-[50%] flex items-center justify-center z-500 md:hidden ${isOpen ? 'bg-white' : 'bg-black'}`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className={`bi bi-list ${isOpen ? 'text-black' : 'text-white'}`} viewBox="0 0 16 16">
+                    <button onClick={() => setIsOpen(!isOpen)} className={`py-2.25 px-3 fixed top-8 right-0 -translate-y-1/3 -translate-x-1/2 w-10 h-10 rounded-[50%] flex items-center justify-center z-500 md:hidden ${isOpen ? 'bg-black' : 'bg-white'}`}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className={`bi bi-list ${isOpen ? 'text-white' : 'text-black'}`} viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                         </svg>
                     </button>
@@ -103,7 +103,7 @@ export default function Header(){
 
                     <a href="#contact" className={`font-['Work Sans'] font-medium text-xl leading-4 -tracking-[1%] ${isDark ? 'text-black' : 'text-[#C4C4C4]'}`}>Contact</a>
 
-                    <button onClick={toggleTheme} className={`w-10 h-10 rounded-[50%] flex items-center justify-center mt-4 ${isDark ? 'bg-black' : 'bg-white'}`}>
+                    <button onClick={toggleTheme} className={`w-10 h-10 rounded-[50%] flex items-center justify-center mt-4 cursor-pointer ${isDark ? 'bg-black' : 'bg-white'}`}>
                         {isDark ? (
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
                                 <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
