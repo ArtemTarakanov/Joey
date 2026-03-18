@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from "./components/Hero.tsx";
 import Projects from "./components/Projects.tsx";
 import Expertise from "./components/Expertise.tsx";
+import String from "./components/String.tsx";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <section id = 'about'>
         <Expertise/>
       </section>
+
+      <String/>
     </>
   )
 }
