@@ -2,14 +2,17 @@ import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useActiveAnchor } from '../hooks/useActiveAnchor';
 import {Link} from 'react-scroll';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Header(){
     const [isOpen, setIsOpen] = useState(false);
     const { isDark, toggleTheme } = useTheme();
     const activeAnchor = useActiveAnchor();
-
     const isActive = (anchor: string) => activeAnchor === anchor;
-
+    const {ref, inView} = useInView({
+        threshold: 0.2,
+    });
     return(
         <>
             <section className={`h-30 flex justify-center items-center max-md:max-h-18 max-md:px-7 max-md:py-5 max-md:justify-between w-full ${isDark ? 'bg-black text-white' : 'bg-white text-black'}`}>
@@ -24,7 +27,13 @@ export default function Header(){
                     </svg>
 
 
-                    <ul className={`rounded-[80px] flex gap-8 h-14 items-center py-2.25 px-3 fixed top-8 left-1/2 -translate-x-1/2 max-md:hidden ${isDark ? 'bg-white' : 'bg-black'}`}>
+                    <motion.ul
+                        ref = {ref}
+                        initial={{opacity: 0, y: 30}}
+                        animate = {inView?{opacity: 1, y:0}:{opacity: 0, y:30}}
+                        transition={{duration:0.8}}
+
+                        className={`rounded-[80px] flex gap-8 h-14 items-center py-2.25 px-3 fixed top-8 left-1/2 -translate-x-1/2 max-md:hidden ${isDark ? 'bg-white' : 'bg-black'}`}>
                         <Link
                             to = "home"
                             smooth = {true}
@@ -98,7 +107,7 @@ export default function Header(){
                                 </svg>
                             )}
                         </button>
-                    </ul>
+                    </motion.ul>
 
                     <button onClick={() => setIsOpen(!isOpen)} className={`py-2.25 px-3 fixed top-8 right-0 -translate-y-1/3 -translate-x-1/2 w-10 h-10 rounded-[50%] flex items-center justify-center z-500 md:hidden ${isOpen ? 'bg-black' : 'bg-white'}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className={`bi bi-list ${isOpen ? 'text-white' : 'text-black'}`} viewBox="0 0 16 16">
